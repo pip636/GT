@@ -32,7 +32,7 @@ function buttonClick(button, panel) {
             setTimeout(function () {
                 panel.siblings().removeClass("current");
                 isAnimating = false;
-            }, 200);
+            }, 350);
         }
     }
 };
