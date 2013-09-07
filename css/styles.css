@@ -17,6 +17,8 @@ nav {position:fixed;
     height: 100%;
     -webkit-transition: right 0.3s ease-in-out;
     transition: right 0.3s ease-in-out;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
 }
 
 #wrapper {
@@ -31,7 +33,7 @@ nav {position:fixed;
 }
 
 #panel-data {
-    background-color: #101010;
+    background-color: #222222;
 }
 
 #panel-top {

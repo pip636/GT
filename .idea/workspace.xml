@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83119e11-9e0b-4ac1-b536-e346524d4376" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GT.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378588872516" ignored="false" />
-    <file path="/index.html" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378585401116" ignored="false" />
-    <file path="/dummy.xml" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378573319500" ignored="false" />
-    <file path="/styles.css" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378588937980" ignored="false" />
+    <file path="/Dummy.txt" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378589061805" ignored="false" />
+    <file path="/index.html" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378590083757" ignored="false" />
+    <file path="/dummy.xml" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378589486216" ignored="false" />
+    <file path="/styles.css" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378589176326" ignored="false" />
     <file path="/normalize.css" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378576326013" ignored="false" />
     <file path="/bootstrap.css" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378578669862" ignored="false" />
     <file path="/app.js" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378588521063" ignored="false" />
@@ -28,34 +28,44 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="3">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/css/styles.css">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="20" column="38" selection-start="404" selection-end="404" vertical-scroll-proportion="0.6028369">
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="GT" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="18" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.7287234">
+            <state line="34" column="18" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="60" selection-start="469" selection-end="469" vertical-scroll-proportion="-5.5">
+            <state line="23" column="54" selection-start="629" selection-end="629" vertical-scroll-proportion="0.7447619">
               <folding />
             </state>
           </provider>
@@ -88,9 +98,9 @@
         <option value="$PROJECT_DIR$/js/jquery-2.0.0.min.js" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -308,7 +318,11 @@
       <created>1378588876572</created>
       <updated>1378588876572</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated animations">
+      <created>1378589066478</created>
+      <updated>1378589066478</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -378,7 +392,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="panel sliders are working" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated animations" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -397,6 +411,7 @@
     <MESSAGE value="removed other pages, added navigation sort of" />
     <MESSAGE value="glyphicons working locally now" />
     <MESSAGE value="panel sliders are working" />
+    <MESSAGE value="updated animations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -444,13 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="60" selection-start="469" selection-end="469" vertical-scroll-proportion="-5.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="32161" selection-start="32378" selection-end="32382" vertical-scroll-proportion="0.27767694">
@@ -458,16 +466,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+        <state line="34" column="18" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="18" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.7287234">
+        <state line="20" column="38" selection-start="404" selection-end="404" vertical-scroll-proportion="0.6028369">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="54" selection-start="629" selection-end="629" vertical-scroll-proportion="0.7447619">
           <folding />
         </state>
       </provider>
