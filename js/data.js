@@ -5,11 +5,11 @@ db.transaction(getStates, errorCb);
 db.transaction(getCities, errorCb);
 $(function() {
     console.log("loaded");
-    $(".list-group-item").on('click', 'a', function(e) {
-        e.preventDefault();
+    $(document).on('click', '.list-group-item', function(e) {
         console.log("called");
        cityId = $(this).data("id");
        db.transaction(getCityData, errorCb);
+        e.preventDefault();
     });
 });
 
@@ -62,11 +62,11 @@ function getCityData(tx) {
 }
 
 function getCityDataSuccess(tx, results) {
-    console.log(results);
+    console.log(results.rows.length);
 }
 function populateDb(tx) {
     isTableExists(tx, "crime", function (status) {
-        //if (!status) {
+        if (!status) {
             tx.executeSql('DROP TABLE IF EXISTS "crime";');
             tx.executeSql('CREATE TABLE "crime"("Id" INTEGER PRIMARY KEY AUTOINCREMENT, "State" VARCHAR, "City" VARCHAR, "Year" INTEGER, "Population" INTEGER, "Violent Crimes" INTEGER, "Murder" INTEGER, "Rape" INTEGER, "Robbery" INTEGER, "Aggravated Assault" INTEGER, "Property Crime" INTEGER, "Burglary" INTEGER, "Larceny" INTEGER, "Vehicle Theft" INTEGER, "Arson" INTEGER);');
             tx.executeSql('INSERT INTO "crime"("State","City","Year","Population","Violent Crimes","Murder","Rape","Robbery","Aggravated Assault","Property Crime", "Burglary", "Larceny", "Vehicle Theft", "Arson")VALUES("ALABAMA","BIRMINGHAM",2011,"213,266","3,163",54,182,"1,011","1,916","17,841","5,806","10,522","1,513",123);');
@@ -627,6 +627,6 @@ function populateDb(tx) {
             tx.executeSql('INSERT INTO "crime"("State","City","Year","Population","Violent Crimes","Murder","Rape","Robbery","Aggravated Assault","Property Crime", "Burglary", "Larceny", "Vehicle Theft", "Arson")VALUES("WISCONSIN","MILWAUKEE",2011,"599,395","6,637",86,205,"3,091","3,255","30,669","7,079","19,030","4,560",272);');
             tx.executeSql('INSERT INTO "crime"("State","City","Year","Population","Violent Crimes","Murder","Rape","Robbery","Aggravated Assault","Property Crime", "Burglary", "Larceny", "Vehicle Theft", "Arson")VALUES("WISCONSIN","MILWAUKEE",2012,"599,395","7,759",91,230,"3,027","4,411","30,228","6,977","18,448","4,803",306);');
 
-        //}
+        }
     });
 }
