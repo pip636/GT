@@ -6,7 +6,7 @@
     </list>
     <ignored path="GT.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378694129420" ignored="false" />
+    <file path="/Dummy.txt" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378694245571" ignored="false" />
     <file path="/index.html" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378690476076" ignored="false" />
     <file path="/dummy.xml" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378606804727" ignored="false" />
     <file path="/styles.css" changelist="83119e11-9e0b-4ac1-b536-e346524d4376" time="1378606223791" ignored="false" />
@@ -340,7 +340,11 @@
       <created>1378694132058</created>
       <updated>1378694132058</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="event click working">
+      <created>1378694267259</created>
+      <updated>1378694267259</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
