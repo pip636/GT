@@ -1,10 +1,72 @@
-var db = window.openDatabase("Database", "1.0", "GhetoTracker", 100000000);
+var db = window.openDatabase("Database", "1.0", "GhettoTracker", 100000000);
+var cityId = 0;
 db.transaction(populateDb, errorCb);
 db.transaction(getStates, errorCb);
+db.transaction(getCities, errorCb);
+$(function() {
+    console.log("loaded");
+    $(".list-group-item").on('click', 'a', function(e) {
+        e.preventDefault();
+        console.log("called");
+       cityId = $(this).data("id");
+       db.transaction(getCityData, errorCb);
+    });
+});
 
+
+function errorCb(err) {
+    alert("Error processing SQL: " + err.code);
+}
+
+function isTableExists(tx, tableName, callback) {
+    tx.executeSql('SELECT * FROM ' + tableName, [], function (tx, resultSet) {
+        if (resultSet.rows.length <= 0) {
+            callback(false);
+        } else {
+            callback(true);
+        }
+    }, function (err) {
+        callback(false);
+    });
+}
+
+function getStates(tx) {
+    tx.executeSql('SELECT DISTINCT State FROM crime', [], getStatesSuccess, errorCb)
+}
+
+function getCities(tx) {
+    tx.executeSql('SELECT Id, State, City FROM crime WHERE year = 2012 ORDER BY City', [], getCitiesSuccess, errorCb)
+}
+
+function getStatesSuccess(tx, results) {
+    var template = Handlebars.compile($("#state-template").html());
+    for (var i = 0, len = results.rows.length; i < len; i++) {
+        var context = {state: results.rows.item(i).State }
+        $("#data-list").append(template(context));
+    }
+}
+
+function getCitiesSuccess(tx, results) {
+    var template = Handlebars.compile($("#city-template").html());
+    for (var i = 0, len = results.rows.length; i < len; i++) {
+        var item = results.rows.item(i);
+        var context = {id: item.Id,
+            city: item.City
+        }
+        $("#data-list > #" + item.State + "> .list-group").append(template(context));
+    }
+}
+
+function getCityData(tx) {
+    tx.executeSql("SELECT * FROM crime WHERE Year = 2012 AND Id = " + cityId, [], getCityDataSuccess, errorCb)
+}
+
+function getCityDataSuccess(tx, results) {
+    console.log(results);
+}
 function populateDb(tx) {
     isTableExists(tx, "crime", function (status) {
-        if (!status) {
+        //if (!status) {
             tx.executeSql('DROP TABLE IF EXISTS "crime";');
             tx.executeSql('CREATE TABLE "crime"("Id" INTEGER PRIMARY KEY AUTOINCREMENT, "State" VARCHAR, "City" VARCHAR, "Year" INTEGER, "Population" INTEGER, "Violent Crimes" INTEGER, "Murder" INTEGER, "Rape" INTEGER, "Robbery" INTEGER, "Aggravated Assault" INTEGER, "Property Crime" INTEGER, "Burglary" INTEGER, "Larceny" INTEGER, "Vehicle Theft" INTEGER, "Arson" INTEGER);');
             tx.executeSql('INSERT INTO "crime"("State","City","Year","Population","Violent Crimes","Murder","Rape","Robbery","Aggravated Assault","Property Crime", "Burglary", "Larceny", "Vehicle Theft", "Arson")VALUES("ALABAMA","BIRMINGHAM",2011,"213,266","3,163",54,182,"1,011","1,916","17,841","5,806","10,522","1,513",123);');
@@ -565,33 +627,6 @@ function populateDb(tx) {
             tx.executeSql('INSERT INTO "crime"("State","City","Year","Population","Violent Crimes","Murder","Rape","Robbery","Aggravated Assault","Property Crime", "Burglary", "Larceny", "Vehicle Theft", "Arson")VALUES("WISCONSIN","MILWAUKEE",2011,"599,395","6,637",86,205,"3,091","3,255","30,669","7,079","19,030","4,560",272);');
             tx.executeSql('INSERT INTO "crime"("State","City","Year","Population","Violent Crimes","Murder","Rape","Robbery","Aggravated Assault","Property Crime", "Burglary", "Larceny", "Vehicle Theft", "Arson")VALUES("WISCONSIN","MILWAUKEE",2012,"599,395","7,759",91,230,"3,027","4,411","30,228","6,977","18,448","4,803",306);');
 
-        }
+        //}
     });
-}
-
-function errorCb(err) {
-    alert("Error processing SQL: " + err.code);
-}
-
-function isTableExists(tx, tableName, callback) {
-    tx.executeSql('SELECT * FROM ' + tableName, [], function (tx, resultSet) {
-        if (resultSet.rows.length <= 0) {
-            callback(false);
-        } else {
-            callback(true);
-        }
-    }, function (err) {
-        callback(false);
-    });
-}
-
-function getStates(tx) {
-    tx.executeSql('SELECT DISTINCT State FROM crime', [], getStatesSuccess, errorCb)
-}
-
-function getStatesSuccess(tx, results) {
-  for(var i = 0, len = results.rows.length; i<len; i++)
-  {
-      console.log(results.rows.item(i).State);
-  }
 }
